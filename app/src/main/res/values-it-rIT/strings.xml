@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lblResistance">Resistenza</string>
+    <string name="lblCombat">Combattività</string>
+    <string name="btnFight">Scontro</string>
+</resources>

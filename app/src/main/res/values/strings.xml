@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">KotLoneWolfCalc</string>
+    <string name="app_name" translatable="false">Lone Wolf Calculator</string>
+    <string name="addString" translatable="false">+</string>
+    <string name="subString" translatable="false">-</string>
+    <string name="lblCombat">Combat Skill</string>
+    <string name="lblResistance">Resistance</string>
+    <string name="btnFight">Fight</string>
 </resources>
