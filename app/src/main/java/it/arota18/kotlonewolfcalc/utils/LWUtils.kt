@@ -1,26 +1,18 @@
-package it.arota18.kotlonewolfcalc
+package it.arota18.kotlonewolfcalc.utils
 
 import kotlin.math.floor
 import kotlin.math.roundToInt
 
-class LWUtils {
-    /**
-     * public method used for random number with default min=0 and max=9
-     *
-     * @return random int between 0 and 9
-     */
-    fun roll(): Int {
-        return roll(1, 10) - 1
-    }
+object LWUtils {
 
     /**
      * public method used for random number with custom limit as params
      *
-     * @param min lower limit
-     * @param max upper limit
+     * @param min lower limit, default = 0
+     * @param max upper limit, default = 9
      * @return random int between given limit
      */
-    fun roll(min: Int, max: Int): Int {
+    fun roll(min: Int = 0, max: Int = 9): Int {
         return floor(min + Math.random() * (max - min + 1)).toInt()
     }
 
