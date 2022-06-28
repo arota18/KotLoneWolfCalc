@@ -20,7 +20,7 @@ class MainActivity : TwoCounterActivity() {
         }
     }
 
-    // buttons handlings
+    // buttons handling
 
     fun toFight(v: View?) {
         try {

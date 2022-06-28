@@ -24,7 +24,7 @@ class FightActivity : TwoCounterActivity() {
         }
     }
 
-    // buttons handlings
+    // buttons handling
 
     fun subEnemyEndurance(v: View?) {
         editTxtValue(1)
@@ -55,7 +55,7 @@ class FightActivity : TwoCounterActivity() {
         }
     }
 
-    private fun fullCombat(combatRatio: Int): String? {
+    private fun fullCombat(combatRatio: Int): String {
         val ccr: Int = LWUtils.convertCombatRatio(combatRatio)
         var result = ""
         var i = 0
@@ -64,9 +64,9 @@ class FightActivity : TwoCounterActivity() {
             val rollValue: Int = LWUtils.roll()
             result += "($rollValue)"
             val lwDmg: Int = LWUtils.decodeDmg[rollValue][ccr][1]
-            lwEndurance.minus(lwDmg)
+            lwEndurance -= lwDmg
             val enDmg: Int = LWUtils.decodeDmg[rollValue][ccr][0]
-            enEndurance.minus(enDmg)
+            enEndurance -= enDmg
             result += enEndurance
         } while (lwEndurance > 0 && enEndurance > 0)
         return "$result lw end:$lwEndurance r:$i"
